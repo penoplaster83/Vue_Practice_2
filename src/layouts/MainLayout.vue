@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import Navbar from "@/components/app/Navbar";
-import Sidebar from "@/components/app/Sidebar";
+import Navbar from '@/components/app/Navbar'
+import Sidebar from '@/components/app/Sidebar'
 
 export default {
   name: 'main-layout',
@@ -30,5 +30,5 @@ export default {
     Navbar,
     Sidebar
   }
-};
+}
 </script>

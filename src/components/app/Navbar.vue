@@ -11,7 +11,7 @@
       <ul class="right hide-on-small-and-down">
         <li>
           <a class="dropdown-trigger black-text"
-          href="#" 
+          href="#"
           data-target="dropdown"
           ref="dropdown">
 
@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import { setInterval, clearInterval } from 'timers';
+import { setInterval, clearInterval } from 'timers'
 export default {
   data: () => ({
     date: new Date(),
@@ -47,13 +47,13 @@ export default {
     dropdown: null
   }),
   methods: {
-    logout() {
-      console.log('Logout');
-      this.$router.push('/login?message=logout'); // здесь мы пушим юзера на страницу логина
+    logout () {
+      console.log('Logout')
+      this.$router.push('/login?message=logout') // здесь мы пушим юзера на страницу логина
     }
   },
-  mounted() {
-    setInterval(()=> {
+  mounted () {
+    setInterval(() => {
       this.date = new Date()
     }, 1000)
     this.dropdown = M.Dropdown.init(this.$refs.dropdown, {
@@ -61,7 +61,7 @@ export default {
     })
   },
 
-  beforeDestroy() {
+  beforeDestroy () {
     clearInterval(this.interval)
     if (this.dropdown && this.dropdown.destroy) {
       this.dropdown.destroy()

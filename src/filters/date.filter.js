@@ -1,4 +1,4 @@
-export default function dataFilter(value, format = 'dateformat') {
+export default function dataFilter (value, format = 'dateformat') {
   // console.log(value)
   const options = {}
 
